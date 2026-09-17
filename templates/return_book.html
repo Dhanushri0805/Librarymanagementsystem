@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Return Book</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="form-page">
+
+    <h1>Return Book</h1>
+
+    <form action="/return" method="POST">
+
+        <label>Select Issued Book</label>
+
+        <select name="issue_id" required>
+
+            <option value="">
+                Select Book
+            </option>
+
+            {% for item in issued %}
+
+            <option value="{{ item['id'] }}">
+
+                {{ item['title'] }}
+                - {{ item['name'] }}
+
+            </option>
+
+            {% endfor %}
+
+        </select>
+
+
+        <label>Return Date</label>
+
+        <input
+            type="date"
+            name="return_date"
+            required
+        >
+
+
+        <button type="submit">
+            Return Book
+        </button>
+
+    </form>
+
+
+    <a href="/" class="back">
+        ← Dashboard
+    </a>
+
+</div>
+
+</body>
+</html>
