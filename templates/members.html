@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Members</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="page-header">
+
+        <h1>Member Management</h1>
+
+        <a href="/members/add" class="button">
+            + Add Member
+        </a>
+
+    </div>
+
+
+    <table>
+
+        <tr>
+
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Action</th>
+
+        </tr>
+
+
+        {% for member in members %}
+
+        <tr>
+
+            <td>{{ member["id"] }}</td>
+
+            <td>{{ member["name"] }}</td>
+
+            <td>{{ member["email"] }}</td>
+
+            <td>{{ member["phone"] }}</td>
+
+            <td>
+
+                <a
+                    href="/members/delete/{{ member['id'] }}"
+                    class="delete"
+                >
+                    Delete
+                </a>
+
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+
+    <br>
+
+    <a href="/" class="back">← Dashboard</a>
+
+</div>
+
+</body>
+</html>
