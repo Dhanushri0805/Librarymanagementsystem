@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Edit Book</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="form-page">
+
+    <h1>Edit Book</h1>
+
+    <form
+        action="/books/edit/{{ book['id'] }}"
+        method="POST"
+    >
+
+        <label>Book Title</label>
+
+        <input
+            type="text"
+            name="title"
+            value="{{ book['title'] }}"
+            required
+        >
+
+
+        <label>Author</label>
+
+        <input
+            type="text"
+            name="author"
+            value="{{ book['author'] }}"
+            required
+        >
+
+
+        <label>Publisher</label>
+
+        <input
+            type="text"
+            name="publisher"
+            value="{{ book['publisher'] }}"
+            required
+        >
+
+
+        <label>Category</label>
+
+        <input
+            type="text"
+            name="category"
+            value="{{ book['category'] }}"
+            required
+        >
+
+
+        <label>Publication Year</label>
+
+        <input
+            type="number"
+            name="year"
+            value="{{ book['year'] }}"
+            required
+        >
+
+
+        <label>Quantity</label>
+
+        <input
+            type="number"
+            name="quantity"
+            value="{{ book['quantity'] }}"
+            required
+        >
+
+
+        <button type="submit">
+            Update Book
+        </button>
+
+    </form>
+
+
+    <a href="/books" class="back">
+        ← Back to Books
+    </a>
+
+</div>
+
+</body>
+</html>
