@@ -1,0 +1,325 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef1f5;
+    color: #333;
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 250px;
+    background: #20252b;
+    color: white;
+    padding: 25px 15px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.menu-title {
+    font-size: 12px;
+    color: #aaa;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px 18px;
+    margin: 5px 0;
+    border-radius: 6px;
+}
+
+.sidebar a:hover {
+    background: #3a4149;
+}
+
+
+/* MAIN */
+
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+
+/* TOP BAR */
+
+.topbar {
+    background: white;
+    padding: 18px 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.topbar h1 {
+    margin: 0;
+}
+
+
+/* WELCOME */
+
+.welcome {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.welcome h2 {
+    margin-top: 0;
+}
+
+
+/* CARDS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #555;
+}
+
+.card p {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+
+/* QUICK ACTIONS */
+
+.section-title {
+    margin-top: 35px;
+}
+
+.quick-actions {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.quick-actions a {
+    background: white;
+    color: #333;
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.quick-actions a:hover {
+    background: #f5f5f5;
+}
+
+.quick-actions span {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   OTHER PAGES
+========================= */
+
+.page {
+    max-width: 1200px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+
+/* BUTTON */
+
+.button,
+.back {
+    display: inline-block;
+    background: #20252b;
+    color: white;
+    text-decoration: none;
+    padding: 11px 18px;
+    border-radius: 5px;
+}
+
+
+/* TABLE */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: #20252b;
+    color: white;
+}
+
+
+/* EDIT / DELETE */
+
+.edit,
+.delete {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 7px 12px;
+    border-radius: 4px;
+    margin: 2px;
+}
+
+.edit {
+    background: #555;
+}
+
+.delete {
+    background: #888;
+}
+
+
+/* =========================
+   FORMS
+========================= */
+
+.form-page {
+    width: 500px;
+    max-width: 90%;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.form-page h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-page label {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.form-page input,
+.form-page select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.form-page button {
+    margin-top: 15px;
+    padding: 12px;
+    background: #20252b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.form-page button:hover {
+    background: #3a4149;
+}
+
+.form-page .back {
+    margin-top: 20px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quick-actions {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .main {
+        padding: 15px;
+        overflow-x: auto;
+    }
+}
