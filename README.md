@@ -34,6 +34,7 @@ Provides an overview of the library system.
 
 ### Book Management
 - Add books
+- <img width="1098" height="358" alt="image" src="https://github.com/user-attachments/assets/bc6ecdd0-691a-42f7-b578-89c9e16c2ad7" />
 - View books
 - Edit book details
 - Delete books
