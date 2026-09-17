@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Library Management System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <h2>📚 Library</h2>
+
+        <p class="menu-title">LIBRARY MANAGEMENT</p>
+
+        <a href="/">Dashboard</a>
+
+        <a href="/books">📖 Books</a>
+
+        <a href="/members">👥 Members</a>
+
+        <a href="/issue">📤 Issue Book</a>
+
+        <a href="/return">📥 Return Book</a>
+
+    </div>
+
+
+    <!-- MAIN CONTENT -->
+
+    <div class="main">
+
+        <div class="topbar">
+
+            <h1>Library Management System</h1>
+
+        </div>
+
+
+        <div class="welcome">
+
+            <h2>Welcome to Library Dashboard</h2>
+
+            <p>
+                Manage books, members, issue and return operations.
+            </p>
+
+        </div>
+
+
+        <!-- CARDS -->
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>Total Books</h3>
+
+                <p>{{ total_books }}</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Total Members</h3>
+
+                <p>{{ total_members }}</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Issued Books</h3>
+
+                <p>{{ issued_books }}</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Available Books</h3>
+
+                <p>{{ available_books }}</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUICK ACTIONS -->
+
+        <h2 class="section-title">Quick Actions</h2>
+
+        <div class="quick-actions">
+
+            <a href="/books/add">
+                <span>➕</span>
+                Add Book
+            </a>
+
+            <a href="/books">
+                <span>📚</span>
+                View Books
+            </a>
+
+            <a href="/members/add">
+                <span>👤</span>
+                Add Member
+            </a>
+
+            <a href="/issue">
+                <span>📤</span>
+                Issue Book
+            </a>
+
+            <a href="/return">
+                <span>📥</span>
+                Return Book
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
